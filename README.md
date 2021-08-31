@@ -16,7 +16,7 @@ If you find this code useful for your research, please cite our [paper](https://
 }
 ```
 ## Demo
-[![](https://github.com/lichen14/AttENT/blob/main/display/introduction.pdf]
+![introduction](https://github.com/lichen14/AttENT/blob/main/display/introduction.pdf)
 
 ## Preparation
 ### Requirements
