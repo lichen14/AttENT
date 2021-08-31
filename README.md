@@ -5,7 +5,7 @@ Official Pytorch Implementation for AttENT.
 - *08/2021*: Check out our paper [AttENT: Domain-Adaptive Medical Image Segmentation via Attention-Aware Translation and Adversarial Entropy Minimization] (submitted to BIBM 2021). With the aligned ensemble of attention-aware image pixel space and entropy-based feature space enables a well-trained segmentation modelto effectively transfer from source domain to target domain.
 
 ## Paper
-![framework](https://github.com/lichen14/TriDL/blob/master/display/framework.png)
+![framework](https://github.com/lichen14/AttENT/blob/main/display/framework.png)
 
 If you find this code useful for your research, please cite our [paper](https://arxiv.org):
 
@@ -16,7 +16,7 @@ If you find this code useful for your research, please cite our [paper](https://
 }
 ```
 ## Demo
-[![](https://github.com/lichen14/TriDL/blob/master/display/introduction.png)]
+[![](https://github.com/lichen14/AttENT/blob/main/display/introduction.pdf]
 
 ## Preparation
 ### Requirements
