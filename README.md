@@ -1,4 +1,4 @@
-# TriDL-Pytorch
+# AttENT-Pytorch
 Official Pytorch Implementation for AttENT.
 
 ## Updates
