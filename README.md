@@ -2,7 +2,7 @@
 Official Pytorch Implementation for AttENT.
 
 ## Updates
-- *10/2021*: Our paper is accepted as the regular paper of BIBM 2021 and will give a presentation online (15 mins).
+- *10/2021*: Our paper is accepted as the regular paper of BIBM 2021 and will give a presentation online (15 mins). The relevant code is currently under review by our institution and will be released soon.
 - *08/2021*: Check out our paper [AttENT: Domain-Adaptive Medical Image Segmentation via Attention-Aware Translation and Adversarial Entropy Minimization] (submitted to BIBM 2021). With the aligned ensemble of attention-aware image pixel space and entropy-based feature space enables a well-trained segmentation modelto effectively transfer from source domain to target domain.
 
 ## Paper
