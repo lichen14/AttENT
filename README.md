@@ -2,13 +2,13 @@
 Official Pytorch Implementation for AttENT.
 
 ## Updates
-- *10/2021*: Our paper is accepted as the regular paper of BIBM 2021 and will give a presentation online (15 mins). The relevant code is currently under review by our institution and will be released soon.
+- *10/2021*: Our paper is accepted as the regular paper of BIBM 2021 and will give a presentation online (15 mins). The relevant code is released here.
 - *08/2021*: Check out our paper [AttENT: Domain-Adaptive Medical Image Segmentation via Attention-Aware Translation and Adversarial Entropy Minimization] (submitted to BIBM 2021). With the aligned ensemble of attention-aware image pixel space and entropy-based feature space enables a well-trained segmentation modelto effectively transfer from source domain to target domain.
 
 ## Paper
 ![framework](https://github.com/lichen14/AttENT/blob/main/display/framework.png)
-
-If you find this code useful for your research, please cite our [paper](https://arxiv.org):
+[Paper](https://arxiv.org) | [Slides](https://github.com/lichen14/AttENT/blob/main/display/BIBM 2021 Presentation-B221-AttENT.pdf)
+If you find this code useful for your research, please cite our work:
 
 ```
 @inproceedings{li2021attent,
@@ -64,21 +64,21 @@ extracted 20 labeled volumes from the T2-SPIR MRI training dataset.
 * **MALBCV**: Please follow the instructions in [here](https://www.synapse.org/#!Synapse:syn3193805/) to download the images and ground-truths. We extracted 30 labeled volumes from the CT training dataset.
 * The CHAOS and MALBCV datasets directory have the same structure but different content:
 ```bash
-<root_dir>/CHAOS/mri_dataset/                               % MRI samples root
-<root_dir>/CHAOS/mri_dataset/train/image/                   % MRI images
-<root_dir>/CHAOS/mri_dataset/train/label/                   % MRI annotation
-<root_dir>/CHAOS/mri_list/                                  % MRI samples list
+<root_dir>/data/CHAOS/mri_dataset/                               % MRI samples root
+<root_dir>/data/CHAOS/mri_dataset/train/image/                   % MRI images
+<root_dir>/data/CHAOS/mri_dataset/train/label/                   % MRI annotation
+<root_dir>/data/CHAOS/mri_list/                                  % MRI samples list
 ...
-<root_dir>/MALBCV/ct_dataset/                                % CT samples root
-<root_dir>/MALBCV/ct_dataset/train/image/                    % CT images
-<root_dir>/MALBCV/ct_dataset/train/label/                    % CT annotation
-<root_dir>/MALBCV/ct_list/                                   % CT samples list
+<root_dir>/data/MALBCV/ct_dataset/                                % CT samples root
+<root_dir>/data/MALBCV/ct_dataset/train/image/                    % CT images
+<root_dir>/data/MALBCV/ct_dataset/train/label/                    % CT annotation
+<root_dir>/data/MALBCV/ct_list/                                   % CT samples list
 ...
 ```
 * For the common organs in the datasets, including liver, right kidney, left kidney, and spleen, we designed cross-modalities segmentation experiments between these organs.
 
 ### Pre-trained models
-* Initial pre-trained model can be downloaded from [DeepLab-V2](https://drive.google.com/open?id=1TIrTmFKqEyf3pOKniv8-53m3v9SyBK0u)
+* Initial pre-trained model can be downloaded from [DeepLab-V2](https://drive.google.com/open?id=1TIrTmFKqEyf3pOKniv8-53m3v9SyBK0u). Please download it and put it [AttENT/pretrained_models/].
 * Translated images for CHAOS and MALBCV datasets can be found in th following link:
   * [translated MRI and CT_need updation](https://drive.google.com)
   
@@ -97,9 +97,9 @@ $ python test.py --cfg ./configs/<your_yml_name>.yml --exp-suffix <your_define_s
 <root_dir>/experiments/snapshots  %output and trained model are stored in this file.
 ```
 #### entropy 
-To train AttENT:
+To train AttENT (Adversarial Feature Alignment in the Entropy Space):
 ```bash
-$ cd <root_dir>/advent
+$ cd AttENT/attent
 $ python train_MRI2CT.py --cfg ./configs/<your_yml_name>.yml  --exp-suffix <your_define_suffix>  --tensorboard         % using tensorboard
 $ python train_CT2MRI.py --cfg ./configs/<your_yml_name>.yml  --exp-suffix <your_define_suffix>  --tensorboard         % using tensorboard
 ```
