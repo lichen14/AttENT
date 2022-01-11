@@ -80,8 +80,6 @@ extracted 20 labeled volumes from the T2-SPIR MRI training dataset.
 
 ### Pre-trained models
 * Initial pre-trained model can be downloaded from [DeepLab-V2](https://drive.google.com/open?id=1TIrTmFKqEyf3pOKniv8-53m3v9SyBK0u). Please download it and put it [AttENT/pretrained_models/].
-* Translated images for CHAOS and MALBCV datasets can be found in th following link:
-  * [translated MRI and CT_need updation](https://drive.google.com)
   
 ## Running the code
 The well-trained model can be downloaded here [AttENT_deeplab](https://drive.google.com/open?id=1uNIydmPONNh29PeXqCb9MGRAnCWxAu99). You can use the pre-trained model or your own model to make a test as following:
