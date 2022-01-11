@@ -1,0 +1,18 @@
+SOURCE: MALBCV
+TARGET: CHAOS
+NUM_WORKERS: 4
+NUM_CLASSES: 5
+GPU_ID : 2
+TRAIN:
+  DA_METHOD: attent
+  MODEL: DeepLabv2
+  RESTORE_FROM: ../pretrained_models/DeepLab_resnet_pretrained_imagenet.pth
+  MULTI_LEVEL: True
+  LAMBDA_ADV_MAIN: 0.001
+  LAMBDA_ADV_AUX: 0.0002
+  BATCH_SIZE_SOURCE: 1
+  BATCH_SIZE_TARGET: 1
+  EPOCHS: 100
+  # SAVE_PRED_EVERY : 100
+TEST:
+  MODE: best
