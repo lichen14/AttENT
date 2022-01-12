@@ -97,11 +97,15 @@ $ python test.py --cfg ./configs/<your_yml_name>.yml --exp-suffix <your_define_s
 ```
 
 #### 1.Attention-aware Image Alignment in the Pixel Space
-To perform cross-domain translation with Attention-aware CycleGAN, 
-we referred the implement of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN). Based on above work, we designed the Attention-aware CycleGAN, which is replaced by [Generator5](https://github.com/lichen14/AttENT/blob/main/attent/models.py). following the instruction of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN/README.md), we revised the train.py with: 
+To perform cross-domain translation with Attention-aware CycleGAN:
+```bash
+python train.py --dataroot datasets/<dataset_name>/ --cuda
+```
+* We referred the implement of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN). Based on above [work](https://github.com/aitorzip/PyTorch-CycleGAN/blob/67da8f9e2b69bd68763451803c7700aaccc92f18/models.py#L3), we designed the Attention-aware CycleGAN, which is replaced by [Generator5](https://github.com/lichen14/AttENT/blob/main/attent/models.py). following the instruction of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN/blob/master/README.md), we revised the train.py with: 
 ```python
 from models import Generator5
 ```
+* With the Attention-aware CycleGAN, we obtained the translated multi-domain samples in the pixel space for the [2.Adversarial Feature Alignment in the Entropy Space].
 
 #### 2.Adversarial Feature Alignment in the Entropy Space
 To train AttENT separately from both directions: 
@@ -115,7 +119,7 @@ $ python train_CT2MRI.py --cfg ./configs/<your_yml_name>.yml  --exp-suffix <your
 ### Well-trained models and our implemented methods will be released soon.
 
 ## Acknowledgements
-This codebase is heavily borrowed from [AdaptSegNet](https://github.com/wasidennis/AdaptSegNet) and [ADVENT](https://github.com/valeoai/ADVENT).
+This codebase is heavily borrowed from [AdaptSegNet](https://github.com/wasidennis/AdaptSegNet), [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN) and [ADVENT](https://github.com/valeoai/ADVENT).
 Thanks to following repos for sharing and we referred some of their codes to construct AttENT:
 ### References
 - [SIFA](https://github.com/cchen-cc/SIFA)
