@@ -89,14 +89,22 @@ $ python test.py --cfg ./configs/<your_yml_name>.yml --exp-suffix <your_define_s
 ```
 ### Training adaptive segmenation network in AttENT
 * To ensure reproduction, the random seed has been fixed in the code. Still, you may need to train a few times to reach the comparable performance.
-* the whole training process is the end-end manner, which means there is no human intervention when training the AttENT. But, there are two separate training directions (MRI \rightarrow CT and CT \rightarrow MRI).
+* The whole training process is not in the end-end manner, which means there is two stages (1.Attention-aware Image Alignment and 2.Adversarial Feature Alignment) with human intervention when training the AttENT. And, there are two separate training directions (MRI \rightarrow CT and CT \rightarrow MRI).
 * By default, logs and snapshots are stored in ```<root_dir>/experiments``` with this structure:
 ```bash
 <root_dir>/experiments/logs
 <root_dir>/experiments/snapshots  %output and trained model are stored in this file.
 ```
-#### entropy 
-To train AttENT (Adversarial Feature Alignment in the Entropy Space):
+
+#### 1.Attention-aware Image Alignment in the Pixel Space
+To perform cross-domain translation with Attention-aware CycleGAN, 
+we referred the implement of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN). Based on above work, we designed the Attention-aware CycleGAN, which is replaced by [Generator5](https://github.com/lichen14/AttENT/blob/main/attent/models.py). following the instruction of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN/README.md), we revised the train.py with: 
+```bash
+from models import Generator5
+```
+
+#### 2.Adversarial Feature Alignment in the Entropy Space
+To train AttENT separately from both directions: 
 ```bash
 $ cd AttENT/attent
 $ python train_MRI2CT.py --cfg ./configs/<your_yml_name>.yml  --exp-suffix <your_define_suffix>  --tensorboard         % using tensorboard
