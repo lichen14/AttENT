@@ -99,7 +99,7 @@ $ python test.py --cfg ./configs/<your_yml_name>.yml --exp-suffix <your_define_s
 #### 1.Attention-aware Image Alignment in the Pixel Space
 To perform cross-domain translation with Attention-aware CycleGAN, 
 we referred the implement of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN). Based on above work, we designed the Attention-aware CycleGAN, which is replaced by [Generator5](https://github.com/lichen14/AttENT/blob/main/attent/models.py). following the instruction of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN/README.md), we revised the train.py with: 
-```bash
+```python
 from models import Generator5
 ```
 
