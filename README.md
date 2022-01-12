@@ -9,6 +9,7 @@ Official Pytorch Implementation for AttENT.
 ![framework](https://github.com/lichen14/AttENT/blob/main/display/framework.png)
 
 [Paper](https://arxiv.org) | [Slides](https://github.com/lichen14/AttENT/blob/main/display/BIBM_2021_Presentation-B221-AttENT.pdf)
+
 If you find this code useful for your research, please cite our work:
 
 ```
@@ -99,7 +100,7 @@ $ python test.py --cfg ./configs/<your_yml_name>.yml --exp-suffix <your_define_s
 #### 1.Attention-aware Image Alignment in the Pixel Space
 To perform cross-domain translation with Attention-aware CycleGAN:
 ```bash
-python train.py --dataroot datasets/<dataset_name>/ --cuda
+$ python train.py --dataroot datasets/<dataset_name>/ --cuda
 ```
 * We referred the implement of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN). Based on above [work](https://github.com/aitorzip/PyTorch-CycleGAN/blob/67da8f9e2b69bd68763451803c7700aaccc92f18/models.py#L3), we designed the Attention-aware CycleGAN, which is replaced by [Generator5](https://github.com/lichen14/AttENT/blob/main/attent/models.py). following the instruction of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN/blob/master/README.md), we revised the train.py with: 
 ```python
