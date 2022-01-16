@@ -8,7 +8,7 @@ Official Pytorch Implementation for AttENT.
 ## Paper
 ![framework](https://github.com/lichen14/AttENT/blob/main/display/framework.png)
 
-[Publication](https://doi.org/10.1109/BIBM52615.2021.9669620) | [Paper](https://github.com/lichen14/lichen14.github.io/blob/assets/publication/BIBM_ATTENT.pdf) | [Slides](https://github.com/lichen14/AttENT/blob/main/display/BIBM_2021_Presentation-B221-AttENT.pdf)
+[Publication](https://doi.org/10.1109/BIBM52615.2021.9669620) | [Paper](https://github.com/lichen14/lichen14.github.io/blob/main/assets/publication/BIBM_ATTENT.pdf) | [Slides](https://github.com/lichen14/AttENT/blob/main/display/BIBM_2021_Presentation-B221-AttENT.pdf)
 
 If you find this code useful for your research, please cite our work:
 
