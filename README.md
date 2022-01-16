@@ -8,14 +8,20 @@ Official Pytorch Implementation for AttENT.
 ## Paper
 ![framework](https://github.com/lichen14/AttENT/blob/main/display/framework.png)
 
-[Paper](https://arxiv.org) | [Slides](https://github.com/lichen14/AttENT/blob/main/display/BIBM_2021_Presentation-B221-AttENT.pdf)
+[Paper](https://github.com/lichen14/lichen14.github.io/assets/publication/BIBM_ATTENT.pdf) | [Slides](https://github.com/lichen14/AttENT/blob/main/display/BIBM_2021_Presentation-B221-AttENT.pdf)
 
 If you find this code useful for your research, please cite our work:
 
 ```
 @inproceedings{li2021attent,
+  author={Li, Chen and Luo, Xin and Chen, Wei and He, Yulin and Wu, Mingfei and Tan, Yusong}, 
+  booktitle={2021 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
   title={AttENT: Domain-Adaptive Medical Image Segmentation via Attention-Aware Translation and Adversarial Entropy Minimization},
-  coming soon.
+  year={2021},  
+  volume={},  
+  number={},  
+  pages={952-959},  
+  doi={10.1109/BIBM52615.2021.9669620}}
 }
 ```
 ## Demo
