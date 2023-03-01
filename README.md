@@ -108,10 +108,12 @@ To perform cross-domain translation with Attention-aware CycleGAN:
 ```bash
 $ python train.py --dataroot datasets/<dataset_name>/ --cuda
 ```
-* We referred the implement of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN). Based on above [work](https://github.com/aitorzip/PyTorch-CycleGAN/blob/67da8f9e2b69bd68763451803c7700aaccc92f18/models.py#L3), we designed the Attention-aware CycleGAN, which is replaced by [Generator5](https://github.com/lichen14/AttENT/blob/main/attent/models.py). following the instruction of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN/blob/master/README.md), we revised the train.py with: 
+* We referred the implement of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN). Based on above [work](https://github.com/aitorzip/PyTorch-CycleGAN/blob/67da8f9e2b69bd68763451803c7700aaccc92f18/models.py#L3), we designed the Attention-aware CycleGAN, which is replaced by [Generator5](https://github.com/lichen14/AttENT/blob/main/attent/models.py). following the instruction of [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN/blob/master/README.md), we replace this [code](https://github.com/aitorzip/PyTorch-CycleGAN/blob/67da8f9e2b69bd68763451803c7700aaccc92f18/train#L12) with
 ```python
 from models import Generator5
 ```
+The rest of the training process is consistent with the original project.
+
 * With the Attention-aware CycleGAN, we obtained the translated multi-domain samples in the pixel space for the [2.Adversarial Feature Alignment in the Entropy Space].
 
 #### 2.Adversarial Feature Alignment in the Entropy Space
@@ -121,9 +123,6 @@ $ cd AttENT/attent
 $ python train_MRI2CT.py --cfg ./configs/<your_yml_name>.yml  --exp-suffix <your_define_suffix>  --tensorboard         % using tensorboard
 $ python train_CT2MRI.py --cfg ./configs/<your_yml_name>.yml  --exp-suffix <your_define_suffix>  --tensorboard         % using tensorboard
 ```
-
-
-### Well-trained models and our implemented methods will be released soon.
 
 ## Acknowledgements
 This codebase is heavily borrowed from [AdaptSegNet](https://github.com/wasidennis/AdaptSegNet), [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN) and [ADVENT](https://github.com/valeoai/ADVENT).
